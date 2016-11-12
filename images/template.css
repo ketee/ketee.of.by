@@ -1,0 +1,184 @@
+body {
+	background-color: #fff;
+}
+body, table {
+	font-family: Arial, Tahoma, Verdana, Helvetica, sans-serif, Georgia;
+	font-weight: normal;
+	font-size: 13px;
+	color: #343434;
+	padding: 0px;
+	margin: 0px;
+}
+a {
+	color: #0000ff
+}
+a:link, a:visited {
+	text-decoration: none
+}
+a:hover, a:active {
+	text-decoration: underline
+}
+/*верхнее меню*/
+a.mainlevel-act:hover, a.mainlevel-act:active, a.mainlevel-act:link, a.mainlevel-act:visited {
+	color: #fff;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 0px 30px;
+}
+
+body.contentpane{/*отступ в версии для печати*/
+	padding: 10px;
+}
+.contentpane {
+	font-weight: normal;
+	margin: 0px;
+	padding: 0px
+}
+table.contentpaneopen {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+table.contentpaneopen td {
+}
+.contentheading, .componentheading, .newsheader {
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+	margin: 0px;
+	padding: 0px
+}
+.contentdescription {
+	font-size: 11px;
+	text-align: left;
+	margin: 0;
+	padding: 0
+}
+div.componentheading {
+	text-align: left;
+	padding: 0 0 10px 0;
+	color: #e41f1f;
+	font-size: 14px;
+	font-weight: bold;
+}
+table.blog {
+}
+
+/*новостные блоки*/
+table.moduletable-news{
+	width: 100%;
+}
+table.moduletable-news th{
+	color: #e41f1f;
+	text-align: left;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 0 0 5px 0
+}
+.banner {
+	text-align: center;
+}
+
+.createdate, .small, .modifydate  {
+	font-size: 10px;
+}
+/*кнопки, поля*/
+.inputbox {
+	font-size: 11px;
+	border: solid 1px #d5d5d5;
+	color: #3066a1;
+	padding: 0 0 0 3px
+}
+div.search{
+	margin: 20px 0;
+}
+div.search .button {
+	margin: 0px 0px 0px 10px;
+	background-color:#fff;
+	background-image: url(button00.gif);
+	width: 17px;
+	height: 17px;
+	padding: 0px;
+	border: 0;
+	cursor: pointer;
+	cursor: hand;
+}
+.button {
+	color: #3066a1;
+	background-color:#ededed;
+	background-image: url(ser00000.gif);
+	background-repeat: repeat-x;
+	background-position: top left;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 11px;
+}
+.sprbut {
+	border: solid 1px #ededed;
+	background-color: #ededed;
+	height: 20px;
+	color: #000;
+	font-size: 11px;
+	cursor: pointer;
+	cursor: hand
+}
+
+/*Для таблиц в материалах*/
+table.mostable {
+	width: 100%;
+}
+table.mostable th {
+	text-align: center;
+	vertical-align: middle;
+	padding: 3px
+}
+table.mostable td {
+	vertical-align: top;
+	padding: 3px
+}
+.leftalign {
+	text-align: left
+}
+.rightalign {
+	text-align: right
+}
+.centeralign {
+	text-align: center
+}
+.border, .border td, .border th {
+	border: 1px solid #c6cbda;
+	border-collapse: collapse
+}
+/*Для отображения списка категорий*/
+.category ul{
+list-style-type: none;
+margin: 5px 0px;
+}
+.buttonheading {
+	vertical-align: top
+}
+.readon {
+	width: 100%;
+	text-align: right;
+	padding-bottom: 5px;
+}
+.back_button {
+	width: 100%;
+	margin: 0px;
+	text-align: right
+}
+.nav_button {
+}
+.pagenav_prev, .pagenav_next {
+}
+.sectiontableheader {
+	width: 0%;
+	text-align: left;
+	font-weight: bold;
+}
+.sectiontableentry1 td, .sectiontableentry2 td {
+	width: 0%;
+	vertical-align: top
+}
+.article_seperator {
+}
