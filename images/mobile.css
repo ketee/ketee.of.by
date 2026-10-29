@@ -1,0 +1,106 @@
+/* Дополнительная мобильная адаптация стилей сайта */
+
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body,
+table {
+    max-width: 100%;
+}
+
+body {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+a {
+    overflow-wrap: anywhere;
+}
+
+/* Таблицы не должны расширять экран телефона */
+table {
+    border-collapse: collapse;
+}
+
+table.contentpaneopen,
+table.moduletable-news,
+table.mostable {
+    width: 100%;
+    max-width: 100%;
+}
+
+td,
+th {
+    overflow-wrap: anywhere;
+}
+
+/* Элементы навигации */
+a.mainlevel-act:hover,
+a.mainlevel-act:active,
+a.mainlevel-act:link,
+a.mainlevel-act:visited {
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 15px;
+}
+
+/* Поля и кнопки */
+.inputbox,
+input,
+select,
+textarea {
+    max-width: 100%;
+    font-size: 16px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Мобильные экраны */
+@media screen and (max-width: 700px) {
+    body,
+    table {
+        font-size: 15px;
+    }
+
+    body.contentpane {
+        padding: 8px;
+    }
+
+    table.contentpaneopen,
+    table.mostable {
+        width: 100%;
+        table-layout: auto;
+    }
+
+    .contentheading,
+    .componentheading,
+    .newsheader {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    div.componentheading {
+        font-size: 17px;
+    }
+
+    .inputbox {
+        min-height: 38px;
+        padding: 6px;
+    }
+
+    .button,
+    .sprbut {
+        min-height: 38px;
+        padding: 8px 12px;
+    }
+
+    .readon,
+    .back_button {
+        text-align: left;
+    }
+}
