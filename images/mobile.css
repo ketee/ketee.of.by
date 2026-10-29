@@ -1,106 +1,301 @@
-/* Дополнительная мобильная адаптация стилей сайта */
+/\* Адаптивные переопределения для мобильных устройств \*/
 
-html {
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
+/\* Общие правила \*/\
+\*,\
+\*::before,\
+\*::after {\
+box-sizing: border-box;\
 }
 
-body,
-table {
-    max-width: 100%;
+html {\
+-webkit-text-size-adjust: 100%;\
+text-size-adjust: 100%;\
 }
 
-body {
-    font-size: 15px;
-    line-height: 1.5;
+body {\
+max-width: 100%;\
+margin: 0;\
 }
 
-a {
-    overflow-wrap: anywhere;
+img,\
+video,\
+iframe {\
+max-width: 100%;\
 }
 
-/* Таблицы не должны расширять экран телефона */
-table {
-    border-collapse: collapse;
+/\* Основной контейнер: отменяем фиксированную ширину 960px \*/\
+div#reducer {\
+position: relative;\
+width: 100%;\
+min-width: 0;\
+min-height: 100%;\
+height: auto;\
 }
 
-table.contentpaneopen,
-table.moduletable-news,
-table.mostable {
-    width: 100%;
-    max-width: 100%;
+/\* Шапка сайта \*/\
+div.head-cont {\
+position: relative;\
+width: 100%;\
+height: auto;\
+min-height: 120px;\
+background-image: url(gr-blue0.gif);\
+background-repeat: repeat-x;\
+background-position: left top;\
+text-align: center;\
+overflow: hidden;\
 }
 
-td,
-th {
-    overflow-wrap: anywhere;
+div.head-cont img {\
+display: inline-block;\
+width: auto;\
+max-width: calc(100% - 20px);\
+height: auto !important;\
+padding: 5px;\
+margin: 5px;\
+object-fit: contain;\
 }
 
-/* Элементы навигации */
-a.mainlevel-act:hover,
-a.mainlevel-act:active,
-a.mainlevel-act:link,
-a.mainlevel-act:visited {
-    padding-left: 8px;
-    padding-right: 8px;
-    font-size: 15px;
+/\* Заголовок сайта, если он используется \*/\
+div.title-cont {\
+max-width: calc(100% - 30px);\
+overflow-wrap: anywhere;\
 }
 
-/* Поля и кнопки */
-.inputbox,
-input,
-select,
-textarea {
-    max-width: 100%;
-    font-size: 16px;
+/\* Горизонтальная навигация \*/\
+div.v-menu {\
+position: relative;\
+width: 100%;\
+height: auto;\
+min-height: 55px;\
+background-image: url(gr-red00.gif);\
+background-repeat: repeat-x;\
+background-position: top left;\
 }
 
-img {
-    max-width: 100%;
-    height: auto;
+div.v-menu table {\
+width: 100%;\
+max-width: 100%;\
+height: auto;\
+text-align: center;\
+vertical-align: middle;\
+padding: 0;\
+margin: 0;\
 }
 
-/* Мобильные экраны */
-@media screen and (max-width: 700px) {
-    body,
-    table {
-        font-size: 15px;
-    }
+div.v-menu td {\
+white-space: normal;\
+overflow-wrap: anywhere;\
+}
 
-    body.contentpane {
-        padding: 8px;
-    }
+div.v-menu a {\
+display: inline-block;\
+max-width: 100%;\
+padding: 10px 8px;\
+line-height: 1.4;\
+}
 
-    table.contentpaneopen,
-    table.mostable {
-        width: 100%;
-        table-layout: auto;
-    }
+/\* Основная область содержимого \*/\
+div.info {\
+width: 100%;\
+min-width: 0;\
+max-width: 1600px;\
+min-height: 0;\
+margin: 0 auto;\
+}
 
-    .contentheading,
-    .componentheading,
-    .newsheader {
-        font-size: 16px;
-        line-height: 1.4;
-    }
+.info {\
+width: 100%;\
+min-width: 0;\
+padding: 0;\
+margin: 0;\
+}
 
-    div.componentheading {
-        font-size: 17px;
-    }
+.info table {\
+max-width: 100%;\
+}
 
-    .inputbox {
-        min-height: 38px;
-        padding: 6px;
-    }
+.info td {\
+vertical-align: top;\
+overflow-wrap: anywhere;\
+}
 
-    .button,
-    .sprbut {
-        min-height: 38px;
-        padding: 8px 12px;
-    }
+.info img {\
+max-width: 100%;\
+height: auto;\
+}
 
-    .readon,
-    .back_button {
-        text-align: left;
-    }
+/\* Колонки основного макета \*/\
+.l-row {\
+width: 24%;\
+height: auto;\
+padding: 20px 10px 20px 20px;\
+}
+
+.l-row td img {\
+vertical-align: middle;\
+max-width: 100%;\
+height: auto;\
+margin: 2px 0;\
+}
+
+.c-row {\
+width: 38%;\
+padding: 20px 20px 20px 10px;\
+}
+
+.r-row {\
+width: 38%;\
+padding: 20px 20px 20px 0;\
+}
+
+/\* Содержимое внутренних страниц \*/\
+.content {\
+padding: 20px;\
+height: auto;\
+min-width: 0;\
+overflow-wrap: anywhere;\
+}
+
+/\* Верхние баннеры \*/\
+.ban-top1,\
+.ban-top2 {\
+float: left;\
+width: 50%;\
+min-height: 100px;\
+height: auto;\
+text-align: center;\
+padding-bottom: 20px;\
+}
+
+.ban-top1 img,\
+.ban-top2 img {\
+max-width: 100%;\
+height: auto;\
+}
+
+/\* Подвал \*/\
+.copy {\
+position: relative;\
+text-align: left;\
+padding: 20px;\
+overflow-wrap: anywhere;\
+}
+
+/\* Таблицы не должны расширять экран \*/\
+table {\
+max-width: 100%;\
+}
+
+@media screen and (max-width: 700px) {\
+/\* Шапка \*/\
+div.head-cont {\
+min-height: 0;\
+padding: 5px 0;\
+}
+
+div.head-cont img {\
+max-width: calc(100% - 10px);\
+margin: 0;\
+padding: 0;\
+}
+
+div.title-cont {\
+position: static;\
+max-width: 100%;\
+margin: 10px;\
+font-size: clamp(16px, 4vw, 22px);\
+}
+
+/\* Меню может переноситься на несколько строк \*/\
+div.v-menu {\
+min-height: 0;\
+background-repeat: repeat;\
+}
+
+div.v-menu table,\
+div.v-menu tbody,\
+div.v-menu tr,\
+div.v-menu td {\
+display: block;\
+width: 100%;\
+height: auto;\
+}
+
+div.v-menu td {\
+padding: 5px;\
+text-align: center;\
+}
+
+div.v-menu a {\
+white-space: normal;\
+overflow-wrap: anywhere;\
+}
+
+/\* Снимаем ограничения ширины и уменьшаем отступы \*/\
+div.info,\
+.info {\
+width: 100%;\
+min-width: 0;\
+max-width: 100%;\
+}
+
+.info table,\
+.info tbody,\
+.info tr {\
+max-width: 100%;\
+}
+
+.info td {\
+padding: 12px !important;\
+}
+
+.l-row,\
+.c-row,\
+.r-row,\
+.content {\
+width: 100%;\
+min-width: 0;\
+height: auto;\
+padding: 12px !important;\
+}
+
+/\* Баннеры располагаются друг под другом \*/\
+.ban-top1,\
+.ban-top2 {\
+float: none;\
+width: 100%;\
+min-height: 0;\
+height: auto;\
+padding: 10px;\
+}
+
+.copy {\
+padding: 15px 12px;\
+}
+
+/\* Не позволяем длинным словам и ссылкам расширять страницу \*/\
+p,\
+li,\
+td,\
+th,\
+a {\
+overflow-wrap: anywhere;\
+}\
+}
+
+@media (max-width: 400px) {\
+.info td {\
+padding: 8px !important;\
+}
+
+.l-row,\
+.c-row,\
+.r-row,\
+.content {\
+padding: 8px !important;\
+}
+
+.copy {\
+padding: 12px 8px;\
+}\
 }
