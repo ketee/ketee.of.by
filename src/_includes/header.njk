@@ -1,0 +1,13 @@
+{% macro render(image, closeReducer=true) %}<div class="head-cont">
+<div align="center">{{ image | safe }}</div>
+</div>
+{% if closeReducer %}</div>{% endif %}
+{% endmacro %}
+{% macro legacy() %}{{ render("<img style=\"width: 910px; height: 156px;\" alt=\"Личный сайт Екатерины Захарченко\" src=\"header.png\" hspace=\"18\" vspace=\"18\" />", true) }}{% endmacro %}
+{% macro current() %}{{ render("<img style=\"width: 630px; height: 173px;\" alt=\"Личный сайт Екатерины Войтович\" src=\"header.png\">", true) }}{% endmacro %}
+{% macro legacyHtml() %}{{ render("<img style=\"width: 910px; height: 156px;\" alt=\"Личный сайт Екатерины Захарченко\" src=\"header.png\" hspace=\"18\" vspace=\"18\">", true) }}{% endmacro %}
+{% macro legacyVoitovich() %}{{ render("<img style=\"width: 910px; height: 156px;\" alt=\"Личный сайт Екатерины Войтович\" src=\"header.png\" hspace=\"18\" vspace=\"18\" />", true) }}{% endmacro %}
+{% macro home() %}{{ render("<img style=\"width: 630px; height: 173px;\" alt=\"Личный сайт Екатерины Войтович\" src=\"header.png\">", false) }}{% endmacro %}
+{% macro currentWithMargins() %}{{ render("<img style=\"width: 630px; height: 173px;\" alt=\"Личный сайт Екатерины Войтович\" src=\"header.png\" hspace=\"18\" vspace=\"18\">", true) }}{% endmacro %}
+{% macro currentXhtml() %}{{ render("<img style=\"width: 630px; height: 173px;\" alt=\"Личный сайт Екатерины Войтович\" src=\"header.png\" />", true) }}{% endmacro %}
+{% macro travel() %}{{ render("<img style=\"width: 630px; height: 173px;\" alt=\"Личный сайт Екатерины Захарченко\" src=\"header.png\" />", true) }}{% endmacro %}

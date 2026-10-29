@@ -1,0 +1,23 @@
+{% import "head.njk" as head %}
+{% import "header.njk" as header %}
+{% import "navigation.njk" as navigation %}
+{% import "footer.njk" as footer %}
+{% block documentStart %}<!DOCTYPE html>
+<html lang="ru">
+<head>
+{% endblock %}
+{% block head %}<meta charset="utf-8">
+{{ head.htmlStyles() }}
+{% endblock %}
+{% block beforeHeader %}</head>
+<body>
+<div id="measurer"></div>
+<div id="reducer">
+{% endblock %}
+{% block header %}{{ header.current() }}{% endblock %}
+{% block navigation %}{{ navigation.current() }}{% endblock %}
+{% block content %}{% endblock %}
+{% block footer %}{% endblock %}
+{% block documentEnd %}</body>
+</html>
+{% endblock %}

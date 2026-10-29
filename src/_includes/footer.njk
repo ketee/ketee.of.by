@@ -1,0 +1,144 @@
+{% macro mailruScreen() %}<script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script>{% endmacro %}
+{% macro mailru() %}<script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=1519405"'+
+' target="_top"><img src="http://df.c2.b7.a1.top.mail.ru/counter'+
+'?id=1519405;t=210;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border="0" height="31" width="88"/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script>{% endmacro %}
+{% macro akavitaSetup() %}<script language="javascript"><!--
+d=document;w=window;n=navigator;d.cookie="cc=1";
+r=''+escape(d.referrer);js=10;c=(d.cookie)?1:0;j=0;
+x=Math.random();u=''+escape(w.location.href);lt=0;
+h=history.length;t=new Date;f=(self!=top)?1:0;cd=0;
+tz=t.getTimezoneOffset();cpu=n.cpuClass;ww=wh=ss=0;
+//--></script>{% endmacro %}
+{% macro akavitaViewport() %}<script language="javascript1.3"><!--
+js=13;wh=w.innerHeight;ww=w.innerWidth;
+wh=(wh?wh:d.documentElement.offsetHeight);
+ww=(ww?ww:d.documentElement.offsetWidth);
+//--></script>{% endmacro %}
+{% macro akavitaCounter() %}<script language="javascript"><!--
+q='lik?id=25637&d='+u+'&r='+r+'&h='+h+'&f='+f;
+q+='&c='+c+'&tz='+tz+'&cpu='+cpu+'&js='+js+'&wh='+wh;
+q+='&ww='+ww+'&ss='+ss+'&cd='+cd+'&j='+j+'&x='+x;
+d.write('<img src="http://adlik.akavita.com/bin/'+
+q+'" alt="Akavita: каталог, рейтинг, счетчик для сайтов Беларуси" '+
+'border=0 width=88 height=31>');
+if(lt){d.write('<'+'!-- ');}//--></script>{% endmacro %}
+{% macro titSetup() %}<script language="javascript">
+<!--
+top_js="1.0";top_r="id=1170&r="+escape(document.referrer)+"&pg="+
+escape(window.location.href);
+document.cookie="tit_top=1; path=/"; top_r+="&c="+(document.cookie?"Y":"N")
+//-->
+</script>{% endmacro %}
+{% macro titScreen() %}<script language="javascript1.2">
+<!--
+top_js="1.2";top_r+="&wh="+screen.width+'x'+screen.height+"&px="+
+(((navigator.appName.substring(0,3)=="Mic"))?
+screen.colorDepth:screen.pixelDepth)
+//-->
+</script>{% endmacro %}
+{% macro titCounter() %}<script language="JavaScript">
+<!--
+top_r+="&js="+top_js+"&type_new=1";
+document.write('<img src="http://www.tit.by/cnt.php?'+top_r+'" width="1" height="1" border="0">');
+//-->
+</script>{% endmacro %}
+{% macro supportYandex() %}<script language="JavaScript">gk5i='<a href="mai';kj43='lto:';w3o4='ew7as';gt2e='&#64';v53a='yandex.by';wl49='"';b3d4='>' + 'ew7as@yandex.by' + '</a>';document.write(gk5i + kj43 + w3o4 + gt2e + v53a + wl49 + b3d4);</script>{% endmacro %}
+{% macro translation() %}<script>function getTranslation(lng){var str_url=location.href;url_trans="http://www.translate.ru/forms/?direction=r"+lng+"&site="+str_url+"&clientID=692683115"; location.href=url_trans;}function tgglDir(){if (document.getElementById("ddAllLang").style.display == "none")document.getElementById("ddAllLang").style.display="inline";else{document.getElementById("ddAllLang").style.display="none"}}</script>{% endmacro %}
+{% macro supportTut() %}<script language="JavaScript">gk5i='<a href="mai';kj43='lto:';w3o4='ew7as';gt2e='&#64';v53a='tut.by';wl49='"';b3d4='>' + 'ew7as@tut.by' + '</a>';document.write(gk5i + kj43 + w3o4 + gt2e + v53a + wl49 + b3d4);</script>{% endmacro %}
+{% macro yandexModern() %}<script type="text/javascript">
+(function (d, w, c) {
+(w[c] = w[c] || []).push(function() {
+try {
+w.yaCounter28211206 = new Ya.Metrika2({
+id:28211206,
+clickmap:true,
+trackLinks:true,
+accurateTrackBounce:true,
+webvisor:true
+});
+} catch(e) { }
+});
+var n = d.getElementsByTagName("script")[0],
+s = d.createElement("script"),
+f = function () { n.parentNode.insertBefore(s, n); };
+s.type = "text/javascript";
+s.async = true;
+s.src = "https://mc.yandex.ru/metrika/tag.js";
+if (w.opera == "[object Opera]") {
+d.addEventListener("DOMContentLoaded", f, false);
+} else { f(); }
+})(document, window, "yandex_metrika_callbacks2");
+</script>{% endmacro %}
+{% macro yandexLegacy() %}<script type="text/javascript">
+(function (d, w, c) {
+(w[c] = w[c] || []).push(function() {
+try {
+w.yaCounter28211206 = new Ya.Metrika({id:28211206,
+clickmap:true,
+trackLinks:true});
+} catch(e) { }
+});
+var n = d.getElementsByTagName("script")[0],
+s = d.createElement("script"),
+f = function () { n.parentNode.insertBefore(s, n); };
+s.type = "text/javascript";
+s.async = true;
+s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+if (w.opera == "[object Opera]") {
+d.addEventListener("DOMContentLoaded", f, false);
+} else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>{% endmacro %}
+{% macro yandexModernSpaced() %}<script type="text/javascript">
+(function (d, w, c) {
+(w[c] = w[c] || []).push(function () {
+try {
+w.yaCounter28211206 = new Ya.Metrika2({
+id: 28211206,
+clickmap: true,
+trackLinks: true,
+accurateTrackBounce: true,
+webvisor: true
+});
+} catch (e) { }
+});
+var n = d.getElementsByTagName("script")[0],
+s = d.createElement("script"),
+f = function () { n.parentNode.insertBefore(s, n); };
+s.type = "text/javascript";
+s.async = true;
+s.src = "https://mc.yandex.ru/metrika/tag.js";
+if (w.opera == "[object Opera]") {
+d.addEventListener("DOMContentLoaded", f, false);
+} else { f(); }
+})(document, window, "yandex_metrika_callbacks2");
+</script>{% endmacro %}
+{% macro yandexLegacySpaced() %}<script type="text/javascript">
+(function (d, w, c) {
+(w[c] = w[c] || []).push(function () {
+try {
+w.yaCounter28211206 = new Ya.Metrika({
+id: 28211206,
+clickmap: true,
+trackLinks: true
+});
+} catch (e) { }
+});
+var n = d.getElementsByTagName("script")[0],
+s = d.createElement("script"),
+f = function () { n.parentNode.insertBefore(s, n); };
+s.type = "text/javascript";
+s.async = true;
+s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+if (w.opera == "[object Opera]") {
+d.addEventListener("DOMContentLoaded", f, false);
+} else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>{% endmacro %}
+{% macro supportYandexSpaced() %}<script language="JavaScript">gk5i = '<a href="mai'; kj43 = 'lto:'; w3o4 = 'ew7as'; gt2e = '&#64'; v53a = 'yandex.by'; wl49 = '"'; b3d4 = '>' + 'ew7as@yandex.by' + '</a>'; document.write(gk5i + kj43 + w3o4 + gt2e + v53a + wl49 + b3d4);</script>{% endmacro %}

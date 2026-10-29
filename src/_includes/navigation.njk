@@ -1,0 +1,23 @@
+{% macro render(homeHref="index.html", guestbookHref="", modern=false, festivalLabel="Фестиваль \" Золотая пчёлка \"", clubGap="") %}<div class="v-menu">
+<table border="0" cellpadding="0" cellspacing="1" width="100%">
+<tbody><tr><td nowrap="nowrap">
+<a href="{{ homeHref }}" class="mainlevel-act">Главная</a>
+{% if guestbookHref %}<a href="{{ guestbookHref }}" class="mainlevel-act">Гостевая</a>
+{% endif %}<a href="klim.html" class="mainlevel-act">{% if modern %}О родном городе{% else %}О своём городе{% endif %}</a>
+<a href="goldbee.html" class="mainlevel-act">{{ festivalLabel | safe }}</a>
+<a href="photo.html" class="mainlevel-act">Фотогалерея</a>
+{% if not modern %}<a href="women.html" class="mainlevel-act">Дамский клуб</a>{{ clubGap | safe }}
+{% endif %}<a href="world.html" class="mainlevel-act">Вокруг света</a>
+{% if modern %}<a href="english.html" class="mainlevel-act">Английский язык</a>
+{% endif %}</td></tr></tbody>
+</table>
+</div>
+{% endmacro %}
+{% macro archiveHome() %}{{ render("default.html", "form.html", false, "Фестиваль \" Золотая пчёлка \"", " &nbsp;") }}{% endmacro %}
+{% macro current() %}{{ render("index.html", "", true, "Фестиваль \" Золотая пчёлка \"", "") }}{% endmacro %}
+{% macro guestbook() %}{{ render("index.html", "https://g66.ru/ew7as/", false, "Фестиваль \" Золотая пчёлка \"", "") }}{% endmacro %}
+{% macro legacy() %}{{ render("index.html", "http://xbase.ru/?ketee", false, "Фестиваль \" Золотая пчёлка \"", "") }}{% endmacro %}
+{% macro archiveGuestbook() %}{{ render("index.html", "form.html", false, "Фестиваль \" Золотая пчёлка \"", "") }}{% endmacro %}
+{% macro archiveHomeWithGuestbook() %}{{ render("default.html", "http://xbase.ru/?ketee", false, "Фестиваль \" Золотая пчёлка \"", "") }}{% endmacro %}
+{% macro home() %}{{ render("index.html", "", true, "Фестиваль\" Золотая пчёлка \"", "") }}{% endmacro %}
+{% macro travel() %}{{ render("index.html", "", true, "Фестиваль \"Золотая пчёлка\"", "") }}{% endmacro %}
