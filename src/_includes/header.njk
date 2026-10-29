@@ -1,5 +1,5 @@
-{% macro render(image, closeReducer=true) %}<div class="head-cont">
-<div align="center">{{ image | safe }}</div>
+{% macro render(image, closeReducer=true, alignment="center", indent="") %}<div class="head-cont">
+<div align="{{ alignment }}">{{ indent | safe }}{{ image | safe }}</div>
 </div>
 {% if closeReducer %}</div>{% endif %}
 {% endmacro %}
@@ -11,3 +11,9 @@
 {% macro currentWithMargins() %}{{ render("<img style=\"width: 630px; height: 173px;\" alt=\"Личный сайт Екатерины Войтович\" src=\"header.png\" hspace=\"18\" vspace=\"18\">", true) }}{% endmacro %}
 {% macro currentXhtml() %}{{ render("<img style=\"width: 630px; height: 173px;\" alt=\"Личный сайт Екатерины Войтович\" src=\"header.png\" />", true) }}{% endmacro %}
 {% macro travel() %}{{ render("<img style=\"width: 630px; height: 173px;\" alt=\"Личный сайт Екатерины Захарченко\" src=\"header.png\" />", true) }}{% endmacro %}
+{% macro homeLeft() %}{{ render("<img style=\"width: 630px; height: 173px;\" alt=\"Личный сайт Екатерины Войтович\" src=\"header.png\">", false, "left", "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;") }}{% endmacro %}
+{% macro currentLeft() %}{{ render("<img style=\"width: 630px; height: 173px;\" alt=\"Личный сайт Екатерины Войтович\" src=\"header.png\">", true, "left", "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;") }}{% endmacro %}
+{% macro currentWithMarginsLeft() %}{{ render("<img style=\"width: 630px; height: 173px;\" alt=\"Личный сайт Екатерины Войтович\" src=\"header.png\" hspace=\"18\" vspace=\"18\">", true, "left", "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;") }}{% endmacro %}
+{% macro currentXhtmlLeft() %}{{ render("<img style=\"width: 630px; height: 173px;\" alt=\"Личный сайт Екатерины Войтович\" src=\"header.png\" />", true, "left", "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;") }}{% endmacro %}
+{% macro travelLeft() %}{{ render("<img style=\"width: 630px; height: 173px;\" alt=\"Личный сайт Екатерины Захарченко\" src=\"header.png\" />", true, "left", "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;") }}{% endmacro %}
+{% macro test() %}{{ render("<img style=\"width: 630px; height: 173px;\" alt=\"Личный сайт Екатерины Войтович\" src=\"header.png\">", true, "left", "&nbsp;&nbsp;&nbsp;") }}{% endmacro %}

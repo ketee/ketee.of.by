@@ -27,12 +27,10 @@ permalink: "/photo.html"
 
 <body style="direction: ltr;">
 
-<div id="measurer">
-</div>
-
 <div id="reducer">
 {% endblock %}
-{% block header %}{{ header.currentXhtml() }}{% endblock %}
+{% block header %}{{ header.currentXhtmlLeft() }}{% endblock %}
+{% block navigation %}{{ navigation.currentEnglishFirst() }}{% endblock %}
 {% block content %}<div class="info">
 <table class="info" border="0" cellpadding="0" cellspacing="0">
 
