@@ -1,33 +1,46 @@
-/* Дополнительная мобильная адаптация стилей сайта */
+﻿/* =====================================================
+   MOBILE.CSS
+   Адаптация сайта ketee.of.by для смартфонов и планшетов
+   Подключать ПОСЛЕ style001.css и template.css
+   ===================================================== */
+
+/* ---------- Общие настройки ---------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 html {
+    width: 100%;
+    max-width: 100%;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
 }
 
-body,
-table {
-    max-width: 100%;
-}
-
 body {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
     font-size: 15px;
     line-height: 1.5;
 }
 
-a {
-    overflow-wrap: anywhere;
+img,
+video,
+iframe {
+    max-width: 100%;
 }
 
-/* Таблицы не должны расширять экран телефона */
+img {
+    height: auto;
+}
+
 table {
-    border-collapse: collapse;
-}
-
-table.contentpaneopen,
-table.moduletable-news,
-table.mostable {
-    width: 100%;
     max-width: 100%;
 }
 
@@ -36,46 +49,321 @@ th {
     overflow-wrap: anywhere;
 }
 
-/* Элементы навигации */
+/* ---------- Основной контейнер ---------- */
+
+div#reducer {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    min-height: 100%;
+    height: auto;
+}
+
+html div#reducer {
+    height: auto;
+}
+
+/* ---------- Шапка сайта ---------- */
+
+div.head-cont {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 120px;
+    background-image: url(gr-blue0.gif);
+    background-repeat: repeat-x;
+    background-position: left top;
+    text-align: center;
+    overflow: hidden;
+}
+
+div.head-cont img {
+    display: inline-block;
+    width: auto;
+    max-width: calc(100% - 20px);
+    height: auto !important;
+    padding: 5px;
+    margin: 5px;
+    object-fit: contain;
+}
+
+/* Заголовок сайта */
+
+div.title-cont {
+    max-width: calc(100% - 30px);
+    overflow-wrap: anywhere;
+}
+
+/* ---------- Главное меню ---------- */
+
+div.v-menu {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 55px;
+    background-image: url(gr-red00.gif);
+    background-repeat: repeat-x;
+    background-position: top left;
+}
+
+div.v-menu table {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+}
+
+div.v-menu td {
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+div.v-menu a {
+    display: inline-block;
+    max-width: 100%;
+    padding: 10px 8px;
+    line-height: 1.4;
+}
+
+/* Активные пункты меню */
+
 a.mainlevel-act:hover,
 a.mainlevel-act:active,
 a.mainlevel-act:link,
 a.mainlevel-act:visited {
     padding-left: 8px;
     padding-right: 8px;
-    font-size: 15px;
 }
 
-/* Поля и кнопки */
+/* ---------- Основная информационная область ---------- */
+
+div.info {
+    width: 100%;
+    min-width: 0;
+    max-width: 1600px;
+    min-height: 0;
+    margin: 0 auto;
+}
+
+.info {
+    width: 100%;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.info table {
+    max-width: 100%;
+}
+
+.info td {
+    vertical-align: top;
+    overflow-wrap: anywhere;
+}
+
+.info img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---------- Колонки сайта ---------- */
+
+.l-row {
+    width: 24%;
+    min-width: 0;
+    height: auto;
+    padding: 20px 10px 20px 20px;
+}
+
+.l-row td img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    margin: 2px 0;
+}
+
+.c-row {
+    width: 38%;
+    min-width: 0;
+    padding: 20px 20px 20px 10px;
+}
+
+.r-row {
+    width: 38%;
+    min-width: 0;
+    padding: 20px 20px 20px 0;
+}
+
+/* ---------- Содержимое страниц ---------- */
+
+.content {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    padding: 20px;
+    overflow-wrap: anywhere;
+}
+
+/* ---------- Баннеры ---------- */
+
+.ban-top1,
+.ban-top2 {
+    float: left;
+    width: 50%;
+    min-height: 100px;
+    height: auto;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.ban-top1 img,
+.ban-top2 img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---------- Нижняя часть сайта ---------- */
+
+.copy {
+    position: relative;
+    text-align: left;
+    padding: 20px;
+    overflow-wrap: anywhere;
+}
+
+/* ---------- Таблицы и текст ---------- */
+
+table.contentpaneopen,
+table.moduletable-news,
+table.mostable {
+    width: 100%;
+    max-width: 100%;
+}
+
+.contentheading,
+.componentheading,
+.newsheader {
+    line-height: 1.4;
+}
+
 .inputbox,
 input,
 select,
 textarea {
     max-width: 100%;
-    font-size: 16px;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
+a {
+    overflow-wrap: anywhere;
 }
 
-/* Мобильные экраны */
+/* =====================================================
+   СМАРТФОНЫ И НЕБОЛЬШИЕ ЭКРАНЫ
+   ===================================================== */
+
 @media screen and (max-width: 700px) {
+
     body,
     table {
         font-size: 15px;
     }
 
-    body.contentpane {
+    /* Шапка */
+
+    div.head-cont {
+        min-height: 0;
+        padding: 5px 0;
+    }
+
+    div.head-cont img {
+        max-width: calc(100% - 10px);
+        margin: 0;
+        padding: 0;
+    }
+
+    div.title-cont {
+        position: static;
+        max-width: 100%;
+        margin: 10px;
+        font-size: clamp(16px, 4vw, 22px);
+    }
+
+    /* Меню */
+
+    div.v-menu {
+        min-height: 0;
+        background-repeat: repeat;
+    }
+
+    div.v-menu table,
+    div.v-menu tbody,
+    div.v-menu tr,
+    div.v-menu td {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    div.v-menu td {
+        padding: 5px;
+        text-align: center;
+    }
+
+    div.v-menu a {
+        white-space: normal;
+        overflow-wrap: anywhere;
         padding: 8px;
     }
 
-    table.contentpaneopen,
-    table.mostable {
+    /* Основная область */
+
+    div.info,
+    .info {
         width: 100%;
-        table-layout: auto;
+        min-width: 0;
+        max-width: 100%;
     }
+
+    .info table,
+    .info tbody,
+    .info tr {
+        max-width: 100%;
+    }
+
+    .info td {
+        padding: 12px !important;
+    }
+
+    /* Колонки располагаются вертикально */
+
+    .l-row,
+    .c-row,
+    .r-row,
+    .content {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        padding: 12px !important;
+    }
+
+    /* Баннеры */
+
+    .ban-top1,
+    .ban-top2 {
+        float: none;
+        width: 100%;
+        min-height: 0;
+        height: auto;
+        padding: 10px;
+    }
+
+    /* Заголовки */
 
     .contentheading,
     .componentheading,
@@ -86,6 +374,16 @@ img {
 
     div.componentheading {
         font-size: 17px;
+    }
+
+    /* Кнопки и поля */
+
+    .inputbox,
+    input,
+    select,
+    textarea {
+        font-size: 16px;
+        max-width: 100%;
     }
 
     .inputbox {
@@ -99,8 +397,72 @@ img {
         padding: 8px 12px;
     }
 
+    /* Ссылки */
+
     .readon,
     .back_button {
         text-align: left;
     }
+
+    /* Подвал */
+
+    .copy {
+        padding: 15px 12px;
+    }
+
+    p,
+    li,
+    td,
+    th,
+    a {
+        overflow-wrap: anywhere;
+    }
 }
+
+/* =====================================================
+   ОЧЕНЬ МАЛЕНЬКИЕ ЭКРАНЫ
+   ===================================================== */
+
+@media screen and (max-width: 400px) {
+
+    body,
+    table {
+        font-size: 14px;
+    }
+
+    .info td {
+        padding: 8px !important;
+    }
+
+    .l-row,
+    .c-row,
+    .r-row,
+    .content {
+        padding: 8px !important;
+    }
+
+    .copy {
+        padding: 12px 8px;
+    }
+
+    div.v-menu a {
+        padding: 7px 5px;
+    }
+}
+
+/* ---------- Уменьшение анимации ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* ---------- Печать ---------- */
+
+@media print {
+    .info {
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+        padding:
